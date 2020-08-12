@@ -1,0 +1,61 @@
+<div class="map">
+<img class ="map" src="https://maps.googleapis.com/maps/api/staticmap?size=1400x1400&zoom=15&scale=2&center=<%= @flat.address %>&key=AIzaSyCBY5sxYVrXI7XCLNKj_I5OslhpZju44Q4" alt="">
+</div>
+
+<div class="container">
+  <div class="right-elements">
+    <div class="booking">
+      <h3>Book this place!</h3>
+      <form>
+        <div class="form-group">
+          <div class="col-md-8 mb-8">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend2">From:</span>
+                <input type="text" class="form-control" id="validationDefaultUsername" placeholder="12/10/2017" aria-describedby="inputGroupPrepend2" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend2">To:</span>
+              </div>
+              <input type="text" class="form-control" id="validationDefaultUsername" placeholder="18/10/2017" aria-describedby="inputGroupPrepend2" required>
+            </div>
+          </div>
+
+          <button class="btn btn-success" type="submit">Book</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="social">
+      <p>Share</p>
+      <div class="social-media">
+        <p>icons</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="details-flat">
+    <div class="box-name">
+      <h1 class ="title"=> <%= @flat.name %></h1>
+      <p class="description"><%= @flat.address %></p>
+    </div>
+
+    <div class="box-description">
+      <h2>A bit more about this place</h2>
+      <p class="description"><%= @flat.description %></p>
+    </div>
+
+    <div class="box-details">
+      <h2>Details</h2>
+      <div class="items-guests-price">
+        <p class="guests"><i class="fas fa-users"></i> <%= @flat.number_of_guests %></p>
+        <p class="price"><i class="fas fa-pound-sign"> </i><%= @flat.price_per_night %></p>
+      </div>
+    </div>
+  </div>
+</div>
